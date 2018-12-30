@@ -7,7 +7,9 @@ install:
       qt5-default libqt5webkit5-dev libqt5svg5-dev qttools5-dev \
       libraw-dev \
       libfftw3-dev \
-      libeigen3-dev
+      libilmbase-dev \
+      libopenexr-dev \
+      libcfitsio3-dev
 script:
   - cmake .
   - make
