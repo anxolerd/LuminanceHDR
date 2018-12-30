@@ -14,7 +14,8 @@ install:
       libilmbase-dev \
       libopenexr-dev \
       libcfitsio3-dev \
-      libexiv2-dev
+      libexiv2-dev \
+      libgsl0-dev
 script:
   - cmake .
   - make
