@@ -13,7 +13,8 @@ install:
       libfftw3-dev \
       libilmbase-dev \
       libopenexr-dev \
-      libcfitsio3-dev
+      libcfitsio3-dev \
+      libexiv2-dev
 script:
   - cmake .
   - make
