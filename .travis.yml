@@ -2,7 +2,7 @@ language: cpp
 compiler:
   - gcc
 install:
-  - sudo apt-get install -y qt5-default libqt5webkit5 libqt5webkit5-dev
+  - sudo apt-get install -y qt5-default libqt5webkit5-dev libqt5svg5-dev
 script:
   - cmake .
   - make
