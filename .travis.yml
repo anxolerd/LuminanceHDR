@@ -2,8 +2,11 @@ language: cpp
 compiler:
   - gcc
 install:
-  - sudo apt-get install -y qt5-default libqt5webkit5-dev libqt5svg5-dev qttools5-dev
-  - sudo apt-get install -y libraw-dev
+  - |
+    sudo apt-get install -y \
+      qt5-default libqt5webkit5-dev libqt5svg5-dev qttools5-dev \
+      libraw-dev \
+      libfftw3-dev
 script:
   - cmake .
   - make
