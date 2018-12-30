@@ -1,10 +1,10 @@
 language: cpp
+dist: xenial
 compiler:
   - gcc
 install:
   - |
     sudo apt-get install -y \
-      cmake ninja-build \
       qt5-default libqt5webkit5-dev libqt5svg5-dev qttools5-dev \
       libboost-atomic-dev libboost-chrono-dev libboost-filesystem-dev \
       libboost-iostreams-dev libboost-program-options-dev \
