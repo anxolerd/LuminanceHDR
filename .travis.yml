@@ -1,5 +1,4 @@
 language: cpp
-dist: bionic
 compiler:
   - gcc
 install:
@@ -15,6 +14,7 @@ install:
       libilmbase-dev \
       libopenexr-dev \
       libcfitsio3-dev
+  - find / -name '*.cmake'
 script:
   - cmake .
   - make
