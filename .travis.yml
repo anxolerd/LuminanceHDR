@@ -8,6 +8,7 @@ install:
       libboost-atomic-dev libboost-chrono-dev libboost-filesystem-dev \
       libboost-iostreams-dev libboost-program-options-dev \
       libboost-system-dev libboost-thread-dev \
+      libeigen3-dev \
       libraw-dev \
       libfftw3-dev \
       libilmbase-dev \
