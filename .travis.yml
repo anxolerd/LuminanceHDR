@@ -18,6 +18,7 @@ install:
       libcfitsio3-dev \
       libexiv2-dev \
       libgsl0-dev
+before_script:
   - |
     CWD="$(pwd)"
     sudo apt-get install -y libgtest-dev && \
