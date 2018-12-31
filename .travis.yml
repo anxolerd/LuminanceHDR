@@ -22,9 +22,9 @@ before_script:
   - |
     CWD="$(pwd)"
     sudo apt-get install -y libgtest-dev && \
-      cd /usr/src/gtest && \
-      sudo cmake . && \
-      sudo make && \
+      cd $(mktemp -d) && \
+      cmake /usr/src/gtest && \
+      make && \
       sudo cp *.a /usr/local/bin/ && \
       cd "${CWD}"
 script:
