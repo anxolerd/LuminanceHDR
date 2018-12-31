@@ -1,10 +1,12 @@
 language: cpp
+dist: xenial
 compiler:
   - gcc
 install:
   - |
     sudo apt-get install -y \
-      qt5-default libqt5webkit5-dev libqt5svg5-dev qttools5-dev \
+      libtiff-dev libjpeg-dev libpng-dev \
+      qt5-default libqt5webkit5-dev libqt5svg5-dev qttools5-dev-tools \
       libboost-atomic-dev libboost-chrono-dev libboost-filesystem-dev \
       libboost-iostreams-dev libboost-program-options-dev \
       libboost-system-dev libboost-thread-dev \
@@ -16,8 +18,17 @@ install:
       libcfitsio3-dev \
       libexiv2-dev \
       libgsl0-dev
+  - |
+    CWD="$(pwd)"
+    sudo apt-get install -y libgtest-dev && \
+      cd /usr/src/gtest && \
+      sudo cmake . && \
+      sudo make && \
+      sudo cp *.a /usr/local/bin/ && \
+      cd "${CWD}"
 script:
-  - cmake .
+  - cmake -DENABLE_UNIT_TEST=ON .
   - make
+  - make test
 notifications:
   email: false
